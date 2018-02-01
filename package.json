@@ -1,0 +1,63 @@
+{
+  "name": "api-ocr",
+  "version": "1.0.36",
+  "description": "Web API for image transcription. apikey is required for API authentication. Email hello@taggun.io for more info.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^0.14.0",
+    "aws-sdk": "^2.175.0",
+    "azure-storage": "^2.7.0",
+    "bluebird": "^3.5.1",
+    "boom": "^7.1.1",
+    "chrono-node": "^1.3.5",
+    "fast-stats": "0.0.3",
+    "good": "^7.3.0",
+    "good-console": "^6.4.1",
+    "good-loggly": "^3.1.0",
+    "good-squeeze": "^5.0.2",
+    "googleplaces": "^0.6.1",
+    "hapi": "^16.6.2",
+    "hapi-swagger": "^7.9.0",
+    "hoek": "^5.0.2",
+    "inert": "^4.2.1",
+    "joi": "^13.0.2",
+    "lodash": "^4.17.4",
+    "maxmind": "^2.4.0",
+    "moment": "^2.20.1",
+    "mongodb": "^3.0.1",
+    "natural": "^0.5.4",
+    "newrelic": "2.4.2",
+    "pdfium": "https://github.com/taggun/node-pdfium/tarball/release",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "sharp": "^0.18.4",
+    "statman-stopwatch": "^2.4.0",
+    "stats-lite": "^2.1.0",
+    "stream-buffers": "^3.0.1",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "cli-table": "^0.3.1",
+    "code": "^5.1.2",
+    "eslint-config-hapi": "^11.1.0",
+    "eslint-plugin-hapi": "^4.1.0",
+    "grunt": "^1.0.1",
+    "grunt-bump": "^0.8.0",
+    "lab": "^14.3.1"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "node node_modules/lab/bin/lab ./handlers/lib/ --grep unit -l -L --lint-fix -m 3000",
+    "test-cov-html": "node node_modules/lab/bin/lab ./handlers/lib/ -r html -o coverage.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:taggun/api-ocr.git"
+  },
+  "author": "ck-lee",
+  "license": "UNLICENSED",
+  "private": true
+}
